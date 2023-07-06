@@ -28,28 +28,24 @@
                     <div class="logo">
                         <img src="./assets/images/logo.png" alt="">
                     </div>
-                    <div class="search_wrap">
+                    <div class="search_wrap" onclick="location.href='./search.html';">
                         <input type="text" class="search_input" placeholder="증상 또는 병원을 입력해주세요.">
-                        <button type="submit">
+                        <button type="button">
                             <img src="./assets/images/search.png" alt="">
                         </button>
                     </div>
                     <script>
+                        // 모바일 자판 나올때 하단 fixed된 컨텐츠가 검색창 가리는 것 방지
+                        
                         //키보드가 올라오는 경우
                         $('.search_input').focus(function(){
                             $('.focus_hide').hide();
                         });     
                         //키보드가 내려가는 경우
-
                         $('.search_input').blur(function(){
-
                             $('.focus_hide').show();
-
-
                         });
-
-
-                    </script>                    
+                    </script>
 
                     <div class="recent">
                         <div class="sub_tit">
@@ -119,7 +115,7 @@
                 </ul>
             </div>
             <ul class="nav">
-                <li>
+                <li class="on">
                     <a href="./index.html">
                         <i>
                             <img src="./assets/images/nav1.png" alt="">
