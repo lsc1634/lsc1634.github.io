@@ -29,11 +29,27 @@
                         <img src="./assets/images/logo.png" alt="">
                     </div>
                     <div class="search_wrap">
-                        <input type="text" placeholder="증상 또는 병원을 입력해주세요.">
+                        <input type="text" class="search_input" placeholder="증상 또는 병원을 입력해주세요.">
                         <button type="submit">
                             <img src="./assets/images/search.png" alt="">
                         </button>
                     </div>
+                    <script>
+                        //키보드가 올라오는 경우
+                        $('.search_input').focus(function(){
+                            $('.focus_hide').hide();
+                        });     
+                        //키보드가 내려가는 경우
+
+                        $('.search_input').blur(function(){
+
+                            $('.focus_hide').show();
+
+
+                        });
+
+
+                    </script>                    
 
                     <div class="recent">
                         <div class="sub_tit">
@@ -58,7 +74,7 @@
 
                 </div>
                 <!-- 배너 -->
-                <div class="banner ">
+                <div class="banner focus_hide">
                     <a href="">
                         <div class="txt">
                             <h5>비대면 진료는 나아파에서!</h5>
@@ -73,7 +89,7 @@
                     </a>
                 </div>
                 <!-- 팝업 리스트 -->
-                <ul class="alert_list ">
+                <ul class="alert_list focus_hide">
                     <li>
                         <a href="">
                             <div class="txt">
